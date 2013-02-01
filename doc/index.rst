@@ -33,24 +33,12 @@ just `open an issue <https://github.com/scrutinizer-ci/scrutinizer/issues/new>`_
 
 Configuration
 -------------
-Scrutinizer relies on Yaml to provide it with configuration data; it scans different locations for this data. Most of
-the time, you either place a ``.scrutinizer.yml`` file in your repository, or if you have the same configuration for all
-branches insert the configuration directly on the settings page.
+Scrutinizer uses configuration data in Yaml format to determine which build steps to conduct, it scans different
+locations for this data. The first source that exists, will win:
 
-Most tools allow you to specify a global configuration which is applicable to your entire project, and also to override
-this global config for selected sub-paths. The general structure looks like this:
+1. Configuration data when manually scheduling a command
+2. ``.scrutinizer.yml`` file in the root directory of your repository
+3. Repository-wide configuration data (defined under the "Settings" tab of your repository)
 
-.. code-block :: yaml
+To learn more about the configuration structure, see the :doc:`configuration chapter <configuration/index>`.
 
-    tools:
-        tool-name:
-            config:
-                # Global Configuration goes here
-
-            path_configs:
-                -
-                    paths: [some-dir/*]
-                    config:
-                        # Configuration for all files in some-dir/ goes here
-
-In the different language sections, you find all the specific options which are available for each tool.
