@@ -4,8 +4,7 @@
     "license": "Apache2",
 
     "repositories": [
-        {"type": "git", "url": "git://github.com/scrutinizer-ci/pdepend"},
-        {"type": "git", "url": "git://github.com/scrutinizer-ci/phpmd"},
+        {"type": "git", "url": "git://github.com/torinaki/pdepend"},
         {"type": "git", "url": "git://github.com/scrutinizer-ci/phpcpd"},
         {"type": "git", "url": "git://github.com/scrutinizer-ci/finder-facade"}
     ],
@@ -25,25 +24,31 @@
         "monolog/monolog": "~1.2.0",
         "psr/log": "1.0.0",
         "phpoption/phpoption": "~1.0@dev",
-        "jms/serializer": "dev-master",
-        "jms/php-manipulator": "dev-master",
+        "jms/serializer": "0.16.0",
+        "jms/php-manipulator": "dev-master#c39de50233aed0254928e52ac0ce1df79dcbbcb1",
         "phpcollection/phpcollection": "0.2.*@dev",
         "guzzle/guzzle": "~3.0",
-        "nikic/php-parser": "dev-master"
+        "nikic/php-parser": "1.0.2"
     },
 
     "require-dev": {
-        "phpmd/phpmd": "dev-master",
-        "pdepend/pdepend": "dev-master",
+        "phpmd/phpmd": "~2.1",
+        "pdepend/pdepend": "2.0.0",
         "squizlabs/php_codesniffer": "dev-master",
-        "fabpot/php-cs-fixer": "dev-master",
+        "fabpot/php-cs-fixer": "~1.0",
         "sebastian/phpcpd": "dev-master",
-        "phploc/phploc": "dev-master"
+        "phploc/phploc": "2.0.6"
     },
 
     "autoload": {
         "psr-0": {
             "Scrutinizer": "src/" 
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-Halstead-complexity-metric": "2.0.0"
         }
     }
 }
