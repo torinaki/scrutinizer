@@ -172,6 +172,10 @@ class PDependAnalyzer implements AnalyzerInterface, LoggerAwareInterface
         $project->setSimpleValuedMetric('pdepend.number_of_methods', (integer) $metricsNode->getAttribute('nom'));
         $project->setSimpleValuedMetric('pdepend.number_of_packages', (integer) $metricsNode->getAttribute('nop'));
         $project->setSimpleValuedMetric('pdepend.roots', (integer) $metricsNode->getAttribute('roots'));
+        $project->setSimpleValuedMetric('pdepend.halstead_length', (integer) $metricsNode->getAttribute('hlen'));
+        $project->setSimpleValuedMetric('pdepend.halstead_volume', (integer) $metricsNode->getAttribute('hvol'));
+        $project->setSimpleValuedMetric('pdepend.halstead_bugs', (double) $metricsNode->getAttribute('hbug'));
+        $project->setSimpleValuedMetric('pdepend.halstead_effort', (integer) $metricsNode->getAttribute('heff'));
 
         foreach ($xpath->query('//package') as $packageNode) {
             /** @var \DOMElement $packageName */
@@ -224,6 +228,10 @@ class PDependAnalyzer implements AnalyzerInterface, LoggerAwareInterface
                 $class->setMetric('pdepend.weighted_method_count', (integer) $classNode->getAttribute('wmc'));
                 $class->setMetric('pdepend.inherited_weighted_method_count', (integer) $classNode->getAttribute('wmci'));
                 $class->setMetric('pdepend.non_private_weighted_method_count', (integer) $classNode->getAttribute('wmcnp'));
+                $class->setMetric('pdepend.halstead_length', (integer) $classNode->getAttribute('hlen'));
+                $class->setMetric('pdepend.halstead_volume', (integer) $classNode->getAttribute('hvol'));
+                $class->setMetric('pdepend.halstead_bugs', (double) $classNode->getAttribute('hbug'));
+                $class->setMetric('pdepend.halstead_effort', (integer) $classNode->getAttribute('heff'));
 
                 foreach ($xpath->query('./method', $classNode) as $methodNode) {
                     /** @var \DOMElement $methodNode */
@@ -241,6 +249,16 @@ class PDependAnalyzer implements AnalyzerInterface, LoggerAwareInterface
                     $method->setMetric('pdepend.lines_of_code', (integer) $methodNode->getAttribute('loc'));
                     $method->setMetric('pdepend.non_comment_lines_of_code', (integer) $methodNode->getAttribute('ncloc'));
                     $method->setMetric('pdepend.npath_complexity', (integer) $methodNode->getAttribute('npath'));
+                    $method->setMetric('pdepend.halstead_length', (integer) $methodNode->getAttribute('hlen'));
+                    $method->setMetric('pdepend.halstead_volume', (integer) $methodNode->getAttribute('hvol'));
+                    $method->setMetric('pdepend.halstead_bugs', (double) $methodNode->getAttribute('hbug'));
+                    $method->setMetric('pdepend.halstead_effort', (integer) $methodNode->getAttribute('heff'));
+                    $method->setMetric('pdepend.halstead_vocabulary', (integer) $methodNode->getAttribute('hvoc'));
+                    $method->setMetric('pdepend.halstead_difficulty', (integer) $methodNode->getAttribute('hdiff'));
+                    $method->setMetric('pdepend.operators_count', (integer) $methodNode->getAttribute('op'));
+                    $method->setMetric('pdepend.operands_count', (integer) $methodNode->getAttribute('od'));
+                    $method->setMetric('pdepend.unique_operators_count', (integer) $methodNode->getAttribute('uop'));
+                    $method->setMetric('pdepend.unique_operands_count', (integer) $methodNode->getAttribute('uod'));
                 }
             }
         }
