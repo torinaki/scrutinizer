@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9be205469b57970b7c9fd8f58fdeac5",
+    "hash": "32c163c400b540a1abba0adb54e7b709",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -427,62 +427,6 @@
             "time": "2014-03-18 08:39:00"
         },
         {
-            "name": "monolog/monolog",
-            "version": "1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "d16496318c3e08e3bccfc3866e104e49cf25488a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/d16496318c3e08e3bccfc3866e104e49cf25488a",
-                "reference": "d16496318c3e08e3bccfc3866e104e49cf25488a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "mlehner/gelf-php": "1.0.*"
-            },
-            "suggest": {
-                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Monolog": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Logging for PHP 5.3",
-            "homepage": "http://github.com/Seldaek/monolog",
-            "keywords": [
-                "log",
-                "logging"
-            ],
-            "time": "2012-08-29 11:53:20"
-        },
-        {
             "name": "nikic/php-parser",
             "version": "v1.0.2",
             "source": {
@@ -669,19 +613,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/scrutinizer-ci/utils.git",
-                "reference": "067efe8c6bfff673e1bdf46a30f00de8e912c1d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/scrutinizer-ci/utils/zipball/067efe8c6bfff673e1bdf46a30f00de8e912c1d9",
-                "reference": "067efe8c6bfff673e1bdf46a30f00de8e912c1d9",
-                "shasum": ""
+                "url": "git://github.com/torinaki/utils",
+                "reference": "f3558fab73bd19d801b3915c05cdaddba070678b"
             },
             "require": {
                 "php": ">=5.4",
-                "symfony/process": "~2.0",
-                "symfony/yaml": "~2.0"
+                "symfony/process": "~2.1",
+                "symfony/yaml": "~2.1"
             },
             "type": "library",
             "autoload": {
@@ -689,8 +627,7 @@
                     "Scrutinizer": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2014-04-28 20:46:54"
+            "time": "2014-11-20 20:02:55"
         },
         {
             "name": "symfony/config",
@@ -1003,12 +940,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "6165f4b5224c22de2873deb6a3a4e622044f0705"
+                "reference": "75deb1b183d2bbf12f4b54c644c0caafca338fbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/6165f4b5224c22de2873deb6a3a4e622044f0705",
-                "reference": "6165f4b5224c22de2873deb6a3a4e622044f0705",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/75deb1b183d2bbf12f4b54c644c0caafca338fbe",
+                "reference": "75deb1b183d2bbf12f4b54c644c0caafca338fbe",
                 "shasum": ""
             },
             "require": {
@@ -1041,7 +978,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-11-10 18:00:54"
+            "time": "2014-11-20 13:24:30"
         }
     ],
     "packages-dev": [

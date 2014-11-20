@@ -21,7 +21,6 @@
         "symfony/yaml": "~2.0",
         "symfony/filesystem": "~2.0",
         "symfony/event-dispatcher": "~2.0",
-        "monolog/monolog": "~1.2.0",
         "psr/log": "1.0.0",
         "phpoption/phpoption": "~1.0@dev",
         "jms/serializer": "0.16.0",
