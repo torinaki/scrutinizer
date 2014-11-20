@@ -6,7 +6,6 @@ use PhpOption\Some;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
 use Scrutinizer\Util\XmlUtils;
-use Monolog\Logger;
 use Scrutinizer\Util\NameGenerator;
 use Scrutinizer\Analyzer\FileTraversal;
 use Symfony\Component\Process\Exception\ProcessFailedException;

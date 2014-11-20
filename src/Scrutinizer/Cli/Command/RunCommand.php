@@ -7,8 +7,6 @@ use JMS\Serializer\Naming\CamelCaseNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\SerializerBuilder;
 use Scrutinizer\Cli\OutputHandler;
-use Monolog\Handler\FingersCrossedHandler;
-use Monolog\Logger;
 use Scrutinizer\Cli\OutputLogger;
 use Scrutinizer\Model\File;
 use Scrutinizer\Model\Project;
