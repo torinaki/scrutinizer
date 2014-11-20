@@ -103,10 +103,11 @@ class PDependAnalyzer implements AnalyzerInterface, LoggerAwareInterface
             $command .= ' --suffix='.escapeshellarg(implode(',', $suffixes));
         }
 
-        $filter = $project->getGlobalConfig('filter');
-        $filterFile = tempnam(sys_get_temp_dir(), 'pdepend-file-filter');
-        file_put_contents($filterFile, json_encode($filter));
-        $command .= ' --filter-file='.escapeshellarg($filterFile);
+        // TODO: original version of pDepend do not support this option
+//        $filter = $project->getGlobalConfig('filter');
+//        $filterFile = tempnam(sys_get_temp_dir(), 'pdepend-file-filter');
+//        file_put_contents($filterFile, json_encode($filter));
+//        $command .= ' --filter-file='.escapeshellarg($filterFile);
 
         $excludedDirs = $project->getGlobalConfig('excluded_dirs');
         if ( ! empty($excludedDirs)) {
@@ -123,7 +124,8 @@ class PDependAnalyzer implements AnalyzerInterface, LoggerAwareInterface
 
         $output = file_get_contents($outputFile);
         unlink($outputFile);
-        unlink($filterFile);
+        // TODO: original version of pDepend do not support this option
+//        unlink($filterFile);
 
         if (0 !== $proc->getExitCode()) {
             throw new ProcessFailedException($proc);
